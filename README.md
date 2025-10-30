@@ -151,7 +151,7 @@ ml-ga-logreg/
 
 ## Usage
 
-1. **Start app** → visit [http://localhost:8501](http://localhost:8501).
+1. **Start app** → visit [https://geneticalgorithmfeatureselection-hvu3uob7t5iou2vr3wxuvq.streamlit.app/](https://geneticalgorithmfeatureselection-hvu3uob7t5iou2vr3wxuvq.streamlit.app/)).
 2. **Data & Preview** → view default dataset or upload your own CSV.
 3. **Preprocess** → review numeric/categorical features and transformations.
 4. **LogReg Baseline** → train & evaluate logistic regression on all features.
@@ -177,6 +177,7 @@ ml-ga-logreg/
 ## License
 
 MIT License. Free to use, modify, and distribute.
+
 
 
 
