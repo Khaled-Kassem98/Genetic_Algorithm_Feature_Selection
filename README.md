@@ -50,9 +50,7 @@ The GA searches for the feature subset (S) that maximizes a chosen fitness equat
 
 ### (1) **Accuracy**
 
-[
-\text{Fitness}(S) = \frac{1}{N_\text{test}} \sum_{i=1}^{N_\text{test}} \mathbf{1}{\hat{y}_i^{(S)} = y_i}
-]
+<img width="403" height="89" alt="image" src="https://github.com/user-attachments/assets/34dca7e5-0aab-468a-bb5f-5735a78bd68e" />
 
 * Fraction of correct predictions.
 * Good for balanced datasets.
@@ -61,16 +59,13 @@ The GA searches for the feature subset (S) that maximizes a chosen fitness equat
 
 ### (2) **F1-score**
 
-[
-\text{Fitness}(S) = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
-]
+<img width="377" height="93" alt="image" src="https://github.com/user-attachments/assets/db38ab0b-cf6d-404c-9a2c-4c206cd74d7a" />
+
 
 where
 
-[
-\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}, \quad
-\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}
-]
+<img width="488" height="99" alt="image" src="https://github.com/user-attachments/assets/5e2fc982-601c-471c-b8c8-8d856e06141d" />
+
 
 * Balances precision and recall.
 * Useful for imbalanced classes.
@@ -80,9 +75,8 @@ where
 
 ### (3) **ROC-AUC**
 
-[
-\text{Fitness}(S) = \text{AUC}\big(\text{ROC curve}\big)
-]
+<img width="352" height="74" alt="image" src="https://github.com/user-attachments/assets/e135a902-7091-41ca-b05e-3fbd2f4279ef" />
+
 
 * Measures the area under the ROC curve for the positive class.
 * Values between 0.5 (random) and 1.0 (perfect separation).
@@ -96,10 +90,10 @@ where
 ml-ga-logreg/
 ├── app.py                      # main Streamlit entry point
 ├── pages/                      # multipage UI
-│   ├── 1_📄_Data_&_Preview.py
-│   ├── 2_🧹_Preprocess.py
-│   ├── 3_📊_LogReg_Baseline.py
-│   └── 4_🧬_GA_Feature_Selection.py
+│   ├── 1_Data_&_Preview.py
+│   ├── 2_Preprocess.py
+│   ├── 3_LogReg_Baseline.py
+│   └── 4_GA_Feature_Selection.py
 ├── src/
 │   ├── io_utils.py             # load config, CSV
 │   ├── preprocess.py           # pipelines for numeric + categorical
@@ -180,4 +174,5 @@ ml-ga-logreg/
 ## License
 
 MIT License. Free to use, modify, and distribute.
+
 
