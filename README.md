@@ -50,8 +50,9 @@ The GA searches for the feature subset (S) that maximizes a chosen fitness equat
 
 ### (1) **Accuracy**
 
-<img width="403" height="89" alt="image" src="https://github.com/user-attachments/assets/34dca7e5-0aab-468a-bb5f-5735a78bd68e" />
-
+$$
+\text{Fitness}(S) = \frac{1}{N_{\text{test}}} \sum_{i=1}^{N_{\text{test}}} \mathbf{1}\!\left[ \hat{y}_i^{(S)} = y_i \right]
+$$
 * Fraction of correct predictions.
 * Good for balanced datasets.
 
@@ -59,12 +60,14 @@ The GA searches for the feature subset (S) that maximizes a chosen fitness equat
 
 ### (2) **F1-score**
 
-<img width="377" height="93" alt="image" src="https://github.com/user-attachments/assets/db38ab0b-cf6d-404c-9a2c-4c206cd74d7a" />
+$$
+\text{Fitness}(S) = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
+$$
 
 
 where
 
-<img width="488" height="99" alt="image" src="https://github.com/user-attachments/assets/5e2fc982-601c-471c-b8c8-8d856e06141d" />
+$$**Precision** = \( \frac{TP}{TP + FP} \)$$, $$**Recall** = \( \frac{TP}{TP + FN} \)$$
 
 
 * Balances precision and recall.
@@ -75,7 +78,7 @@ where
 
 ### (3) **ROC-AUC**
 
-<img width="352" height="74" alt="image" src="https://github.com/user-attachments/assets/e135a902-7091-41ca-b05e-3fbd2f4279ef" />
+$$Fitness(S)=AUC(ROC curve)$$
 
 
 * Measures the area under the ROC curve for the positive class.
@@ -174,5 +177,6 @@ ml-ga-logreg/
 ## License
 
 MIT License. Free to use, modify, and distribute.
+
 
 
