@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="160" viewBox="0 0 640 160" role="img" aria-labelledby="title desc">
+  <title id="title">Logistic Regression + GA Logo</title>
+  <desc id="desc">Abstract DNA-helix intertwined with a chart mark, suitable for dark or light UI.</desc>
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="soft">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      .mark { filter:url(#soft); }
+      .text { font-family: Inter, Segoe UI, Roboto, Arial, sans-serif; font-weight: 700; letter-spacing: 0.5px; }
+      @media (prefers-color-scheme: dark) {
+        .word { fill: #e5e7eb; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background safe area (transparent) -->
+  <rect x="0" y="0" width="640" height="160" fill="none"/>
+
+  <!-- Icon mark -->
+  <g class="mark" transform="translate(20,20)">
+    <!-- Double helix curves -->
+    <path d="M10,10 C70,30 70,90 10,110" fill="none" stroke="url(#g1)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M50,10 C-10,30 -10,90 50,110" fill="none" stroke="url(#g2)" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Beads on strands -->
+    <g>
+      <circle cx="22" cy="26" r="5.5" fill="#06b6d4"/>
+      <circle cx="38" cy="42" r="5.5" fill="#a855f7"/>
+      <circle cx="22" cy="58" r="5.5" fill="#06b6d4"/>
+      <circle cx="38" cy="74" r="5.5" fill="#a855f7"/>
+      <circle cx="22" cy="90" r="5.5" fill="#06b6d4"/>
+      <circle cx="38" cy="106" r="5.5" fill="#a855f7"/>
+    </g>
+
+    <!-- Separator -->
+    <line x1="90" y1="0" x2="90" y2="120" stroke="#94a3b8" stroke-opacity="0.35" stroke-width="2"/>
+
+    <!-- Chart / logistic curve block -->
+    <g transform="translate(110,8)">
+      <!-- Axes -->
+      <line x1="0" y1="96" x2="0" y2="0" stroke="#94a3b8" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="96" x2="140" y2="96" stroke="#94a3b8" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/>
+      <!-- Logistic curve -->
+      <path d="M0,96 C20,96 40,80 60,60 C80,40 100,16 140,16" fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"/>
+      <!-- Bars to suggest features -->
+      <rect x="18" y="56" width="10" height="40" rx="2" fill="#22c55e" opacity="0.9"/>
+      <rect x="38" y="40" width="10" height="56" rx="2" fill="#22c55e" opacity="0.9"/>
+      <rect x="58" y="28" width="10" height="68" rx="2" fill="#22c55e" opacity="0.9"/>
+      <rect x="78" y="20" width="10" height="76" rx="2" fill="#22c55e" opacity="0.9"/>
+      <rect x="98" y="44" width="10" height="52" rx="2" fill="#22c55e" opacity="0.9"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(330,100)">
+    <text class="text word" x="0" y="0" font-size="44" fill="#0f172a">LogReg + GA</text>
+    <text class="text" x="2" y="26" font-size="16" fill="#64748b">Feature Selection Dashboard</text>
+  </g>
+</svg>

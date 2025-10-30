@@ -1,0 +1,19 @@
+paths:
+  default_csv: "data/data1.csv"
+data:
+  target: "diagnosis"
+  test_size: 0.2
+  random_state: 42
+model:
+  C: 1.0
+  max_iter: 200
+ga:
+  population_size: 40
+  generations: 20
+  tournament_k: 3
+  crossover_prob: 0.8
+  mutation_prob: 0.05
+  elitism: 1
+  max_features: null        # or an int cap
+ui:
+  preview_rows: 100
