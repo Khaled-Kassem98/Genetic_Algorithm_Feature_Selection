@@ -1,0 +1,12 @@
+name: keepalive
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl app
+        run: |
+          curl -sSfL https://geneticalgorithmfeatureselection-hvu3uob7t5iou2vr3wxuvq.streamlit.app/ >/dev/null || true
