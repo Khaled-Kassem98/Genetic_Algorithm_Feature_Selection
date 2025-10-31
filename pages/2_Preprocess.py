@@ -23,8 +23,9 @@ Xt = ct.fit_transform(X)
 feat_names = get_feature_names(ct)
 
 st.session_state["preprocess"] = {"ct": ct, "feat_names": feat_names}
-st.write("Numerical:", num_cols)
-st.write("Categorical:", cat_cols)
+st.write("Numerical:", ",".join(num_cols))
+st.write("Categorical:", ",".join(cat_cols))
 st.write("Transformed shape:", Xt.shape)
 st.dataframe(X.head(20))
 st.caption("Above: raw features. Encoded and scaled in the model step.")
+
